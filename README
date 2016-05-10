@@ -1,0 +1,26 @@
+jcom.script可以compile所有的source files
+
+Multicast:
+
+	Server
+Usage: java lab2_multicast.Server <FilePath> [<packet loss rate>]
+<packet loss rate> 代表server摹擬遺失封包率(刻意不傳送封包)，預設值=0, range:0~1
+
+	Client
+Usage: java lab2_multicast.Client
+
+** 先開數個client，再開server，輸出檔案名稱固定為output.txt
+** 使用第3方FEC library，提供encoder and decoder (https://www.backblaze.com/open-source-reed-solomon.html)
+
+Unicast:
+
+	Server
+Usage: java lab2_unicast.Server <filename> [<port>=5000]
+default port: 5000
+
+	Client
+Usage: java lab2_unicast.Client <ip> [<port>=5000]
+default port: 5000
+
+** 先開server，再用數個client連線，輸出檔案名稱為unicast_<LocalPort>.txt
+

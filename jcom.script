@@ -1,0 +1,4 @@
+javac com/backblaze/erasure/*.java
+javac lab2_multicast/*.java
+javac lab2_unicast/*.java
+
